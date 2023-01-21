@@ -1,0 +1,860 @@
+body {
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+.img-h50 {
+	height: 50%;
+	width: auto;
+}
+/*===================================== MAIN CONTAINER LAYOUTING=====================================*/
+#dim-background {
+	position: fixed;
+	z-index: 50;
+	display: none;
+	box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, .7);
+}
+#list-desktop-opener {
+	position: fixed;
+
+	bottom: 3%;
+	left: 1%;
+
+	height: 50px;
+	width: auto;
+	transition: .3s;
+
+	z-index: 51;
+}
+#list-desktop-opener-wrapper {
+	height: 100%;
+	width: 50px;
+
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	padding: 5px;
+
+	transition: .3s;
+}
+#list-desktop-opener-wrapper img {
+	transition: .3s;
+}
+#list-dekstop-icon-name-wrapper {
+	height: 100%;
+	width: auto;
+}
+#list-desktop-icon-name {
+	color: var(--text_color_2);
+	white-space: nowrap;
+
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-left: 15px;
+	overflow: hidden;
+	background-color: rgba(var(--secondary_color), .5);
+}
+#list-desktop-icon-name h1 {
+	font-size: 100%;
+	padding: 5px;
+}
+#list-desktop-opener-wrapper:hover {
+	width: 100%;
+	background-color: rgba(var(--primary_color), 1);
+	border-radius: 10px;
+}
+.container-disable {
+	overflow-y: hidden;
+}
+.container-enable {
+	overflow-y: scroll;
+}
+#main-container {
+	width: 100%;
+	height: 97vh;
+	/*main gridding*/
+	display: grid;
+	grid-template-columns: 70% 30%;
+	grid-template-rows: 13% 87%;
+	grid-template-areas: 
+	"top-container top-container"
+	"home-container player-container"
+	;
+
+
+	background-color: rgba(22, 62, 219, .5);	
+}
+
+
+/* ============== HOME CONTAINER ============== */
+#home-container {
+	grid-area: home-container;
+	background-color: rgba(99, 88, 77, 1.0);
+
+	transition: .5s ease;
+}
+/* ============== HOME CONTAINER ============== */
+
+
+/* ============== PLAYER CONTAINER ============== */
+#player-container {
+	grid-area: player-container;
+	background-color: red;
+	z-index: 21;
+}
+/* ============== PLAYER CONTAINER ============== */
+
+
+/* ============== TOP CONTAINER ============== */
+#top-container {
+	grid-area: top-container;
+	background-color: darkcyan;
+}
+#top-container-wrapper {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-flow: row;
+}
+#top-container-wrapper > div {
+	background-color: rgba(0, 0, 0, .2);
+	color: white;
+
+	display: flex;
+	align-items: center;
+}
+#top-logo {
+	padding: 0px 35px 0px 35px;
+	margin-right: auto;
+	width: 10%;
+	justify-content: center;
+}
+#top-account {
+	width: 40%;
+	justify-content: right;
+}
+#top-account-wrapper {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 77% 23%;
+	grid-template-areas: 
+	"account-profile-about account-profile-picture"
+	;
+}
+#account-profile-picture {
+	grid-area: account-profile-picture;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#profile-picture-wrapper {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+}
+#profile-picture-wrapper > img {
+	height: 90%;
+	width: auto;
+	min-width: 30px;
+	margin-right: 4%;
+}
+
+#account-profile-about {
+	height: 100%;
+	width: 100%;
+	grid-area: account-profile-about;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 60% 40%;
+	grid-template-areas: 
+	"account-profile-name"
+	"account-profile-status"
+	;
+}
+#account-profile-about > div {
+	overflow: hidden;
+	text-align: right;
+}
+#account-profile-name {
+	grid-area: account-profile-name;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	font-size: 1rem;
+}
+#account-profile-status {
+	grid-area: account-profile-status;
+	width: 100%;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	overflow: hidden;
+	font-size: 1rem;
+}
+/* ============== TOP CONTAINER ============== */
+
+
+/* ============== NAV CONTAINER ============== */
+#nav-container {
+	border-radius: 15px 15px 0px 0px;
+	position: fixed;
+	bottom: 10px
+	left: 0;
+	height: 0px;
+	width: 100%;
+
+	transition: .5s ease;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 33.3% 33.4% 33.3%;
+	grid-template-areas: 
+	"nav-list-btn nav-home-btn nav-player-btn"
+	;
+}
+#nav-list-btn {
+	grid-area: nav-list-btn;
+}
+#list-btn-wrapper {
+
+}
+#nav-home-btn {
+	grid-area: nav-home-btn;
+}
+#nav-player-btn {
+	grid-area: nav-player-btn;
+}
+.nav-wrapper-btn {
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+
+	background-color: rgba( var(--primary_color), 1);
+}
+.nav-btn-animate {
+	position: relative;
+	transition: .3s ease;
+	
+	background-color: rgba(var(--line_color), 1.0);
+	height: 5%;
+	width: 0%;
+
+	margin-top: -3%;
+}
+.nav-btn-active {
+	width: 100%;
+}
+/* ============== NAV CONTAINER ============== */
+
+
+/* ============== LIST CONTAINER ============== */
+#list-container {
+	background-color: rgba(var(--primary_color), 1);
+
+	position: fixed;
+	z-index: 51;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0%;
+
+	transition: .5s ease;
+	overflow: hidden;
+
+}
+#list-container-wrapper {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-gap: 2px;
+	grid-template-rows: 25% 6% auto;
+	grid-template-columns: 100%;
+	grid-template-areas:
+	"list-playing-box" 
+	"list-searching-box"
+	"list-song-box"
+	;
+}
+	/* 3 MAIN BOX INSIDE THE LIST */
+	#list-searching-box {
+		grid-area: list-searching-box;
+		background-color: rgba(var(--primary_color), 1);
+		margin: 0px 5px 0px 2px;
+	}
+	#list-searching-wrapper {
+		background-color: rgba(var(--secondary_color), 1);
+		border-radius: 10px;
+
+		width: 100%;
+		height: 100%;
+		display: grid;
+		grid-template-columns: 1fr 10%;
+		grid-template-rows: 100%;
+		grid-template-areas: 
+		"list-searching list-searching-icon"
+		;
+	}
+	#list-searching-wrapper > div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+	#list-searching {
+		grid-area: list-searching;
+		height: 100%;
+		width: 100%;
+	}
+	#searching-block {
+		height: 60%;
+		width: 95%;
+
+		font-size: 120%;
+		color: var(--text_color_2);
+
+		background-color: rgba(0, 0, 0, .0);
+		border: none;
+	}
+	#searching-result-wrapper {
+		position: absolute;
+		background-color: rgba(var(--primary_color), 1);
+		
+		height: 0%;
+		width: 100%;
+		margin-top: 1%;
+
+		overflow-y: scroll;
+		display: flex;
+		flex-flow: column;
+
+		transition: .3s;
+
+		color: var(--text_color_2);
+	}
+
+	#list-searching-icon {
+		grid-area: list-searching-icon;
+	}
+	#search-icon-wrapper {
+		height: 50%;
+		width: auto;
+	}
+	#search-icon {
+		width: auto;
+		height: 100%;
+	}
+
+	/* === */
+	#list-playing-box {
+		grid-area: list-playing-box;
+		background-color: rgba(var(--secondary_color), 1);
+
+		margin: 5px;
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+	#list-playing-box-wrapper {
+		height: 95%;
+		width: 100%;
+		display: flex;
+		flex-flow: row;
+		justify-content: left;
+		align-items: center;
+	}
+	.que-box {
+		height: 95%;
+		max-width: 15vh;
+		min-width: 15vh;
+
+		margin: 0px 7px 0px 7px;
+		background-color: rgba(var(--primary_color), 1.0);
+		flex-shrink: 0;
+
+		border: 1px solid rgba(var(--line_color), 1.0);
+		border-radius: 10px;
+		box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.5), 0 7px 21px 0 rgba(0, 0, 0, 0.39);
+	}
+	.que-pic-wrapper {
+		height: 100%;
+		min-width: 100%;
+	}
+	.que-pic {
+		height: 100%;
+		width: 100%;
+		border-radius: 10px;
+		filter: brightness(.5) blur(1px);
+		transform: scale(.9);
+		transition: .7s;
+	}
+	.que-pic-active {
+		filter: brightness(1);
+		transform: scale(1);
+	}
+	.que-pic-name {
+		overflow: hidden;
+
+		color: var(--text_color_2);
+		font-size: 2vh;
+
+		min-height: 20%;
+		width: 100%;
+
+		position: relative;
+		top: -25%;
+		z-index: 1;
+
+		border-radius: 0px 0px 10px 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		white-space: nowrap;
+		background-color: rgba(var(--secondary_color), .5);
+	}
+	.que-options {
+		overflow: hidden;
+
+		color: white;
+		font-size: 2vh;
+
+		height: 0%;
+		width: 100%;
+
+		position: relative;
+		top: -100%;
+		z-index: 2;
+
+		display: grid;
+		grid-template-rows: 50% 50%;
+		grid-template-columns: 70% 30%;
+		grid-template-areas: 
+		"que-delete que-options-close" /* this part not done, for closing */ 
+		"que-change-pos que-options-close"
+		;
+		background-color: rgba(var(--primary_color), .70);
+		transition: .2s ease;
+
+		border-radius: 10px;
+	}
+	.que-options-active {
+		height: 100%;
+	}
+	.que-options > div {
+		display: flex;
+		align-items: center;
+		margin: 5%;
+		text-align: center;
+	}
+	.que-options > div:hover {
+		background-color: rgba(var(--line_color), .5);
+	}
+	#que-delete {
+		grid-area: que-delete;
+		justify-content: space-evenly;
+		flex-flow: column;
+		border-radius: 10px 0px 0px 0px;
+	}
+	.que-choose-pos {
+		overflow: hidden;
+
+		color: white;
+		font-size: 2vh;
+
+		height: 100%;
+		width: 0%;
+
+		position: relative;
+		top: -100%;
+		z-index: 2;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		background-color: rgba(var(--primary_color), .55);
+		transition: .2s ease;
+
+		border-radius: 10px;
+	}
+	.que-choose-active {
+		width: 100%;
+	}
+	#que-change-pos {
+		grid-area: que-change-pos;
+		justify-content: space-evenly;
+		flex-flow: column;
+		border-radius: 0px 0px 0px 10px;
+		transition: .5s;
+	}
+	.que-change-pos-active {
+		background-color: rgba(var(--line_color), .4);
+	}
+	#que-options-close {
+		grid-area: que-options-close;
+		justify-content: center;
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		text-align: center;
+		border-radius: 0px 10px 10px 0px;
+	}
+	/* === */
+	#list-song-box {
+		grid-area: list-song-box;
+		background-color: rgba(var(--primary_color), 1.0);
+		margin: 5px 5px 5px 0px;
+		overflow-y: scroll;
+	}
+
+		.top-alphabetic {
+			display: flex;
+			flex-flow: column;
+			height: 40px;
+
+			width: 100%;
+
+			max-height: 40px;
+			overflow-y: hidden;
+			background-color: rgba(var(--primary_color), 1);
+			transition: .4s ease;
+		}
+		.alphabetic-box {
+			background-color: rgba(var(--secondary_color), 1);
+
+			margin: 2px;
+			height: 35px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.alphabetic-wrapper {
+			display: flex;
+			flex-shrink: 0;
+			margin-left: 2%;
+
+			color: var(--text_color_2);
+		}
+		.alphabetic-icon-wrapper {
+			height: 100%;
+			width: 50%;
+
+			display: flex;
+			justify-content: right;
+		}
+		.alphabetic-icon {
+			height: 100%;
+			width: auto;
+		}
+		.top-alphabetic-active {
+			height: auto;
+			max-height: 80%;
+		}
+		.second-alphabetic-active {
+			width: 100%;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+
+			.list-song-wrapper {
+				padding: 3px;
+				color: var(--text_color_2);
+
+				background-color: var(--secondary_color);
+				border: 1px solid rgba(var(--line_color), 1);
+				border-radius: 10px;
+
+				width: auto;
+				max-height: 120px;
+				min-height: 120px;
+
+				margin: 5px;
+				display: grid;
+				grid-template-rows: 35% 65%;
+				grid-template-columns: 90px 2% 75%;
+				grid-template-areas:
+				"list-song-img . list-song-name"
+				"list-song-img . list-song-desc"
+				;
+
+				transition: .3s ease;
+			}
+			.list-song-name {
+				display: flex;
+				align-items: center;
+				grid-area: list-song-name;
+				white-space: nowrap;
+			}
+			.list-song-desc {
+				grid-area: list-song-desc;
+				word-wrap: break-word;
+				white-space: nowrap;
+			}
+			.list-song-img {
+				grid-area: list-song-img;
+				height: 100%;
+				width: 100%;
+			}
+
+			.song-img-style {
+				height: 100%; 
+				width: 100%;
+				border-radius: 7px 0px 0px 7px;
+			}
+			.song-img-bg-style {
+				background-blend-mode: darken;
+			}
+			.song-selected {
+				filter: brightness(.6);
+				transform: scale(.95);
+			}
+/* ============== LIST CONTAINER ============== */
+
+/*===================================== MAIN CONTAINER MEDIA QUERY =====================================*/
+
+/* MOBILE LAYOUT + JS ON OTHER */
+/*MEDIA QUERY WIDTH*/
+@media screen and (max-width: 980px) {
+	#main-container {
+		width: 100%;
+		height: 97vh;
+		/*main gridding*/
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 1fr;
+		grid-template-areas: 
+		"home-container"
+		;
+
+		background-color: rgba(22, 62, 219, .5);	
+	}
+	#player-container {
+		grid-area: player-container;
+		background-color: red;
+		position: fixed;
+		right: 0;
+		top: 0;
+		width: 100%;
+		height: 0%;
+		z-index: 51;
+		transition: .5s ease;
+		overflow: hidden;
+	}
+	/* ============== LIST CONTAINER ============= */
+	#list-song-box {
+		grid-area: list-song-box;
+		background-color: rgba(var(--primary_color), 1.0);
+		margin: 5px 5px 80px 0px;
+		overflow-y: scroll;
+	}
+	/*.que-box {
+		height: 95%;
+		max-width: 25%;
+		min-width: 25%;
+		margin: 0px 5px 0px 5px;
+		background-color: lightcyan;
+		flex-shrink: 0;
+	}*/
+	.list-song-wrapper {
+		padding: 3px;
+		color: var(--text_color_2);
+
+		background-color: var(--secondary_color);
+		border: 1px solid rgba(var(--line_color), 1);
+		border-radius: 10px;
+
+		width: auto;
+		max-height: 90px;
+		min-height: 90px;
+
+		margin: 5px;
+		display: grid;
+		grid-template-rows: 35% 65%;
+		grid-template-columns: 70px 2% 73%;
+		grid-template-areas:
+		"list-song-img . list-song-name"
+		"list-song-img . list-song-desc"
+		;
+	}
+	/* ============== TOP CONTAINER ============== */
+	#top-container {
+		grid-area: top-container;
+		background-color: darkcyan;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 70px;
+		z-index: 11;
+		transition: .5s ease;
+		overflow: hidden;		
+	}
+	#top-logo {
+		margin-right: auto;
+		width: 20%;
+		justify-content: left;
+	}
+	#top-account {
+		width: 40%;
+		justify-content: right;
+	}
+	#top-account-wrapper {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-rows: 100%;
+		grid-template-columns: 77% 23%;
+		grid-template-areas: 
+		"account-profile-about account-profile-picture"
+		;
+	}
+	/* ============== TOP CONTAINER ============== */
+	#home-container {
+		margin-top: 70px;
+		margin-bottom: 75px;
+	}
+
+	/* ============== NAV CONTAINER ============== */
+	#nav-container {
+		position: fixed;
+		z-index: 100;
+		bottom: 0;
+		left: 0;
+		height: 80px;
+		width: 100%;
+
+		transition: .5s ease;
+		overflow: hidden;
+	}
+}
+
+/**/
+@media screen and (max-width: 780px) {
+	#top-account-wrapper {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-rows: 100%;
+		grid-template-columns: 70% 30%;
+		grid-template-areas: 
+		"account-profile-about account-profile-picture"
+		;
+	}
+}
+@media screen and (max-width: 600px) {
+	#top-account-wrapper {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-rows: 100%;
+		grid-template-columns: 65% 35%;
+		grid-template-areas: 
+		"account-profile-about account-profile-picture"
+		;
+	}
+}
+@media screen and (max-width: 580px) {
+	/* ============== List CONTAINER ============== */
+
+}
+
+@media screen and (max-width: 500px) {
+	#top-account-wrapper {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-rows: 100%;
+		grid-template-columns: 60% 40%;
+		grid-template-areas: 
+		"account-profile-about account-profile-picture"
+		;
+	}
+}
+@media screen and (max-width: 430px) {
+	#top-account-wrapper {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-rows: 100%;
+		grid-template-columns: 55% 45%;
+		grid-template-areas: 
+		"account-profile-about account-profile-picture"
+		;
+	}
+}
+@media screen and (max-width: 380px) {
+	#top-account-wrapper {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-rows: 100%;
+		grid-template-columns: 45% 55%;
+		grid-template-areas: 
+		"account-profile-about account-profile-picture"
+		;
+	}
+	#account-profile-about p {
+		font-size: 11px;
+	}
+}
+
+/*MEDIA QUERY HEIGHT*/
+/*@media screen and (max-height: 500px) { /*when height is lower than 500px, run this
+	.que-box {
+		height: 95%;
+		max-width: 15%;
+		min-width: 15%;
+		margin: 0px 5px 0px 5px;
+		background-color: lightcyan;
+		flex-shrink: 0;
+	}
+}
+@media screen and (min-height: 800px) { /*when height is higher than 800px, run this
+	.que-box {
+		height: 95%;
+		max-width: 28%;
+		min-width: 28%;
+		margin: 0px 5px 0px 5px;
+		background-color: lightcyan;
+		flex-shrink: 0;
+	}
+}*/
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background-color: rgba(var(--primary_color), 1);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(var(--secondary_color), 1);
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(var(--line_color), 1);
+}
+#list-playing-box::-webkit-scrollbar {
+	height: 10px;
+}
+
+:root {
+	--primary_color: 20, 20, 20;
+	--secondary_color: 48, 56, 65;
+	--line_color: 238, 238, 238;
+
+	--text_color_1: black;
+	--text_color_2: white;
+}

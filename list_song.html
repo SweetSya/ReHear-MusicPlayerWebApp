@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		html {
+			background-color: rgba(20, 20, 20, 1);
+			color: white;
+			font-family: comic sans ms;
+		}
+	</style>
+</head>
+<body>
+<button><a href="index.html">BACK</a></button>
+<h1>LIST SONG</h1>
+<div>
+	<ul id="list-wrapper">
+	</ul>
+</div>
+	<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript">
+
+	function getDataOfSong(letter) {
+		switch(letter) {
+			case 'A':
+			case '1':
+			return songDataA;
+				break;
+			case 'B':
+			case '2':
+			return songDataB;
+				break;
+			case 'C':
+			case '3':
+			return songDataC;
+				break;
+			case 'D':
+			case '4':
+			return songDataD;
+				break;
+			case 'E':
+			case '5':
+			return songDataE;
+				break;
+			case 'F':
+			case '6':
+			return songDataF;
+				break;
+			case 'G':
+			case '7':
+			return songDataG;
+				break;
+			case 'H':
+			case '8':
+			return songDataH;
+				break;
+			case 'I':
+			case '9':
+			return songDataI;
+				break;
+			case 'J':
+			case '10':
+			return songDataJ;
+				break;
+			case 'K':
+			case '11':
+			return songDataK;
+				break;
+			case 'L':
+			case '12':
+			return songDataL;
+				break;
+			case 'M':
+			case '13':
+			return songDataM;
+				break;
+			case 'N':
+			case '14':
+			return songDataN;
+				break;
+			case 'O':
+			case '15':
+			return songDataO;
+				break;
+			case 'P':
+			case '16':
+			return songDataP;
+				break;
+			case 'Q':
+			case '17':
+			return songDataQ;
+				break;
+			case 'R':
+			case '18':
+			return songDataR;
+				break;
+			case 'S':
+			case '19':
+			return songDataS;
+				break;
+			case 'T':
+			case '20':
+			return songDataT;
+				break;
+			case 'U':
+			case '21':
+			return songDataU;
+				break;
+			case 'V':
+			case '22':
+			return songDataV;
+				break;
+			case 'W':
+			case '23':
+			return songDataW;
+				break;
+			case 'X':
+			case '24':
+			return songDataX;
+				break;
+			case 'Y':
+			case '25':
+			return songDataY;
+				break;
+			case 'Z':
+			case '26':
+			return songDataZ;
+				break;	
+			
+		}
+	}
+
+	mergingDatas = [];
+	function mergeAllData() {
+		for(x = 1; x <= 26; x++) {
+			data = getDataOfSong(x.toString());
+			for(y = 0; y < data.length; y++) {
+				mergingDatas.push(data[y]);
+			}
+		}
+	}
+
+	mergeAllData();
+
+	parent = document.getElementById('list-wrapper');
+	for(var x = 0; x < mergingDatas.length; x++) {
+		li = document.createElement('li');
+		li.innerHTML = `
+		<img src="`+mergingDatas[x].img+`" style="width: 70px; height: 90px;">`+mergingDatas[x].name+` ---> 
+		<a href="https://www.youtube.com/results?search_query=`+mergingDatas[x].yt_query+`"> YT Query Search Link </a>
+		`;
+
+		li.style.cssText = 'display: flex; flex-flow: row; justify-content: left; align-items: center; white-space: nowrap;';
+
+		parent.appendChild(li);
+	}
+</script>
+</body>
+</html>

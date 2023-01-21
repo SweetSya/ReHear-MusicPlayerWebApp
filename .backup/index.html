@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>ReHear</title>
+</head>
+<body onload="whenLoadTest()">
+	<div id="dim-background"></div>
+	<div id="main-container">
+		<div id="list-desktop-opener">
+			<div id="list-desktop-opener-wrapper">
+				<img src="icon/headbar.png">
+				<div id="list-desktop-icon-name">
+					<h1>Open List</h1>
+				</div>
+			</div>
+		</div>
+		<div id="home-container" class="container-enable">
+			Home container
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+			<p>dummy</p>
+		</div>
+		<div id="player-container">
+			player container
+			<audio controls id="player">
+				<source src="" type="audio/ogg">
+			</audio>
+		</div>
+		<div id="top-container">
+			<div id="top-container-wrapper">
+				<div id="top-logo">
+					ReHear!
+				</div>
+				<div id="top-account">
+					<div id="top-account-wrapper">
+						<div id="account-profile-picture">
+							<div id="profile-picture-wrapper">
+								<img  src="testing-img/rika.jpg">
+							</div>
+						</div>
+						<div id="account-profile-about">
+							<div id="account-profile-name">
+								<p id="account-name">SweetW</p>
+							</div>
+							<div id="account-profile-status">
+								<p></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="nav-container">
+			<div id="nav-list-btn">
+				<div id="nav-list-btn-wrapper" class="nav-wrapper-btn">
+					<img src="icon/list_white.png" class="img-h50">
+				</div>
+				<div class="nav-btn-animate">
+					
+				</div>
+			</div>
+			<div id="nav-home-btn">
+				<div id="nav-home-btn-wrapper" class="nav-wrapper-btn">
+					<img src="icon/home_white.png" class="img-h50">
+				</div>
+				<div class="nav-btn-animate nav-btn-active">
+					
+				</div>
+			</div>
+			<div id="nav-player-btn">
+				<div id="nav-player-btn-wrapper" class="nav-wrapper-btn">
+					<img src="icon/player_white.png" class="img-h50">
+				</div>
+				<div class="nav-btn-animate">
+					
+				</div>
+			</div>
+		</div>
+		<div id="list-container">
+			<div id="list-container-wrapper">
+				<div id="list-playing-box">
+					<div id="list-playing-box-wrapper">
+						
+					</div>
+				</div>
+				<div id="list-searching-box">
+					<div id="list-searching-wrapper">
+						<div id="list-searching">
+							<input id="searching-block" type="text" name="">	
+						</div>
+						<div id="list-searching-icon">
+							<div id="search-icon-wrapper">
+								<img id="search-icon" src="icon/search_white.png">
+							</div>
+						</div>
+					</div>
+					<div id="searching-result-wrapper">
+
+					</div>
+				</div>
+				<div id="list-song-box">
+					<div id="alphabetic-a" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic A</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-a-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-b" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic B</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-b-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-c" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic C</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-c-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-d" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic D</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-d-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-e" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic E</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-e-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-f" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic F</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-f-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-g" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic G</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-g-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-h" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic H</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-h-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-i" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic I</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-i-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-j" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic J</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-j-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-k" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic K</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-k-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-l" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic L</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-l-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-m" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic M</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-m-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-n" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic N</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-n-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-o" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic O</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-o-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-p" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic P</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-p-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-q" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic Q</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-q-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-r" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic R</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-r-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-s" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic S</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-s-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-t" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic T</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-t-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-u" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic U</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-u-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-v" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic V</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-v-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-w" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic W</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-w-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-x" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic X</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-x-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-y" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic Y</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-y-content">
+									
+						</div>
+					</div>
+					<div id="alphabetic-z" class="top-alphabetic">
+						<div class="alphabetic-box" onclick="openSubList(this.parentNode.id)">
+							<div class="alphabetic-wrapper">
+								<p>Alphabetic Z</p>
+							</div>
+							<div class="alphabetic-icon-wrapper">
+								<img class="alphabetic-icon" src="icon/expand_white.png">
+							</div>
+						</div>
+						<div id="alphabetic-z-content">
+									
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript" src="mobile-desktop-layout.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="data.js"></script>
+</html>	

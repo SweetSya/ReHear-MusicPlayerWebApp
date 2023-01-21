@@ -1,0 +1,87 @@
+z index : 
+
+Dim : 50
+
+player : 11
+top-container : 11
+
+#top-account-wrapper {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-rows: 100%;
+		grid-template-columns: 77% 23%;
+		grid-template-areas: 
+		"account-profile-about account-profile-picture"
+		;
+	}
+
+/**/
+@media screen and (max-width: 780px) {
+	#top-account-wrapper {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-rows: 100%;
+		grid-template-columns: 70% 30%;
+		grid-template-areas: 
+		"account-profile-about account-profile-picture"
+		;
+	}
+}
+@media screen and (max-width: 600px) {
+	#top-account-wrapper {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-rows: 100%;
+		grid-template-columns: 65% 35%;
+		grid-template-areas: 
+		"account-profile-about account-profile-picture"
+		;
+	}
+}
+	/* ============== List CONTAINER ============== */
+@media screen and (max-width: 580px) {
+	/**/
+}
+
+@media screen and (max-width: 500px) {
+	#top-account-wrapper {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-rows: 100%;
+		grid-template-columns: 60% 40%;
+		grid-template-areas: 
+		"account-profile-about account-profile-picture"
+		;
+	}
+}
+@media screen and (max-width: 430px) {
+	#top-account-wrapper {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-rows: 100%;
+		grid-template-columns: 55% 45%;
+		grid-template-areas: 
+		"account-profile-about account-profile-picture"
+		;
+	}
+}
+@media screen and (max-width: 380px) {
+	#top-account-wrapper {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-rows: 100%;
+		grid-template-columns: 45% 55%;
+		grid-template-areas: 
+		"account-profile-about account-profile-picture"
+		;
+	}
+	#account-profile-about p {
+		font-size: 11px;
+	}
+}
